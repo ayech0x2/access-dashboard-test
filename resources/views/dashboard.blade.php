@@ -9,12 +9,12 @@
 
         <div class="row">
           <div  class="chart-wrapper col-6">
-            <h3 class="title">Title </h3>
+            <h3 class="title">Vists last week </h3>
             <canvas  id="chart-0" ></canvas>
           </div>
 
           <div class="chart-wrapper  col-6">
-            <h3 class="title">All vists</h3>
+            <h3 class="title">All vists from the beginning</h3>
             <canvas id="chart-1" ></canvas>
           </div>
         </div>
