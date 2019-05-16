@@ -29,7 +29,7 @@ Please make sure to follow these instructions:
 
 * `php artisan db:seed —-class=VisitsTableSeeder`
 
-* `php artisan key generate`
+* `php artisan key:generate`
 
 * `php artisan serve`
 
