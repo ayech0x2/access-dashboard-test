@@ -1,3 +1,6 @@
+* **I'm using Laravel 5.8**
+* **PHP >= 7.1.3**
+
 Please make sure to follow these instructions:
 
 * `npm install`
