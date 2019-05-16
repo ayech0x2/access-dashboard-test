@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
 // Variables
 @import 'variables';
 // Bootstrap
@@ -8,7 +8,9 @@
 //icons
 @import "sidemenu";
 @import "navigation";
-
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 #application {
   display: flex;
 
@@ -31,7 +33,7 @@
 .main-content {
   height: calc(100vh - 60px);
   overflow: scroll;
-  padding: 40px 40px 0 40px;
+  padding: 20px 20px 0 20px;
 
 }
 
@@ -45,22 +47,22 @@
   height: 60px;
   @include flexbox();
   @include align-items(center);
-  font-size: 24px;
+  font-size: 20px;
   display: block;
   line-height: 60px;
   width: 100%;
   @include border-radius(3px);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 0 20px 0 0;
 
   &:before {
     content: "";
-    height: 5px;
-    width: 100px;
-    background: $brand-secondary;
+    height: 3px;
+    width: 120px;
+    background: $brand-primary;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
   }
 
   .user {
@@ -69,20 +71,26 @@
 }
 
 table {
+  border: none;
+  border-radius: 0;
+  a{
+    color:$brand-dark;
+  }
   &.table {
     tr {
       th {
         border: 0;
+        border-radius: 0;
         background-color: $brand-dark !important;
 
         &:first-child {
-          border-top-left-radius: 3px;
-          border-bottom-left-radius: 3px;
+          border-top-left-radius:0px;
+          border-bottom-left-radius: 0px;
         }
 
         &:last-child {
-          border-top-right-radius: 3px;
-          border-bottom-right-radius: 3px;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
         }
       }
       &:nth-child(even){
@@ -93,14 +101,12 @@ table {
         background-color: white;
       }
       &:last-child{
-        border-bottom: 1px solid $brand-dark;
       }
       td{
         &:first-child{
-          border-left: 1px solid $brand-dark;
         }
         &:last-child{
-          border-right: 1px solid $brand-dark;
+          border-right: none;
         }
       }
     }
@@ -116,21 +122,31 @@ table {
       > a {
         background-color: $brand-dark;
         color: $brand-secondary;
-        border-color: $brand-secondary;
+        border:none;
+        border-radius: 3px;
       }
 
       &.active {
         > span {
           background-color: $brand-secondary;
-          border-color: $brand-dark;
-          color: $brand-dark;
+          border: none;
+          color: white;
         }
       }
       .page-link{
         background-color: $brand-dark;
-        color: $brand-secondary;
-        border-color: $brand-secondary;
+        color: white;
+        border: none;
       }
     }
   }
+}
+
+.btn-gradient{
+  background: $brand-primary-gradient;
+  border: none;
+  color: $brand-dark;
+  border-radius: 35px;
+  padding: 10px 25px;
+  font-size: 18px;
 }

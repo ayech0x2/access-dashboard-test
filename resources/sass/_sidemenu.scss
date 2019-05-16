@@ -1,12 +1,13 @@
 .side-menu {
   height: 100%;
-  width: 300px;
+  width: 250px;
   position: relative;
   z-index: 1;
   top: 0;
   left: 0;
   opacity: 1;
-  background-color: $brand-dark;
+  background: $brand-dark url("/img/mac.png");
+  background-size: cover;
   overflow-x: hidden;
   transition: 0.5s;
 
@@ -28,11 +29,11 @@
 
   .inner {
     .logo {
-      margin-top: 100px;
-      margin-bottom: 50px;
+      margin-top: 40px;
+      margin-bottom: 20px;
 
       > img {
-        max-width: 200px;
+        max-width: 160px;
         display: block;
         margin: auto;
       }
@@ -44,6 +45,7 @@
       right: 20px;
       font-size: 25px;
       color: $white;
+      opacity: .7;
       cursor: pointer;
       @include transition(all, 0.1s);
     }
@@ -54,10 +56,13 @@
       @include flex-direction(column);
 
       > a {
-        padding: 0 20px;
-        font-size: 18px;
+        padding: 0 10px;
+        font-size: 15px;
+        font-weight: 600;
         color: $white;
         text-decoration: none;
+        background-size: 150%;
+        background-position: left;
         height: 50px;
         margin-bottom: 5px;
         @include transition(all, 0.1s);
@@ -65,7 +70,8 @@
         @include align-items(center);
 
         &.active {
-          background: $brand-primary;
+          background: $brand-primary-gradient;
+          background-position: center;
         }
 
         &:hover {

@@ -8,7 +8,8 @@ $line-height-base: 1.6;
 
 
 // colors
-$brand-primary: #f5bf45;
-$brand-secondary: #da5d45;
+$brand-primary:rgba(212,94,69,1);
+$brand-primary-gradient:linear-gradient(90deg, rgba(212,94,69,1) 0%, rgba(228,170,68,1) 35%, rgba(255,183,0,1) 100%);
+$brand-secondary: #da6658;
 $brand-dark: #18173f;
 $white: #fff;
