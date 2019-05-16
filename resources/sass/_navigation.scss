@@ -1,0 +1,49 @@
+nav {
+  &.navbar {
+    height: 60px !important;
+    background: $brand-dark !important;
+    border-left: 5px solid $brand-secondary;
+
+    .navbar-container {
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+      width: 100%;
+    }
+
+    .navbar-brand {
+      color: white !important;
+    }
+
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: white !important;
+          }
+
+          .dropdown-menu {
+            background: $brand-dark !important;
+
+            &:hover {
+              .dropdown-item {
+                color: $white !important;
+
+                &:hover {
+                  background: $brand-primary !important;
+                  color: $white !important;
+                }
+              }
+            }
+
+            .dropdown-item {
+              color: $white !important;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,136 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "mixins";
+//icons
+@import "sidemenu";
+@import "navigation";
+
+#application {
+  display: flex;
+
+  .app-content {
+    flex: 1;
+  }
+
+  .side-menu-container {
+    height: 100vh;
+    max-height: 100vh;
+
+    &.collapsed {
+    }
+  }
+}
+
+.chart-container {
+}
+
+.main-content {
+  height: calc(100vh - 60px);
+  overflow: scroll;
+  padding: 40px 40px 0 40px;
+
+}
+
+.charts {
+  @include flexbox();
+  flex-direction: column;
+}
+
+.title {
+  position: relative;
+  height: 60px;
+  @include flexbox();
+  @include align-items(center);
+  font-size: 24px;
+  display: block;
+  line-height: 60px;
+  width: 100%;
+  @include border-radius(3px);
+  margin-bottom: 40px;
+  padding: 0 20px 0 0;
+
+  &:before {
+    content: "";
+    height: 5px;
+    width: 100px;
+    background: $brand-secondary;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .user {
+    text-transform: uppercase;
+  }
+}
+
+table {
+  &.table {
+    tr {
+      th {
+        border: 0;
+        background-color: $brand-dark !important;
+
+        &:first-child {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+      }
+      &:nth-child(even){
+        background-color: $brand-secondary;
+        color: white;
+      }
+      &:nth-child(odd){
+        background-color: white;
+      }
+      &:last-child{
+        border-bottom: 1px solid $brand-dark;
+      }
+      td{
+        &:first-child{
+          border-left: 1px solid $brand-dark;
+        }
+        &:last-child{
+          border-right: 1px solid $brand-dark;
+        }
+      }
+    }
+  }
+}
+
+.pagination-container {
+  margin: auto;
+
+  .pagination {
+    .page-item {
+      margin: 2px;
+      > a {
+        background-color: $brand-dark;
+        color: $brand-secondary;
+        border-color: $brand-secondary;
+      }
+
+      &.active {
+        > span {
+          background-color: $brand-secondary;
+          border-color: $brand-dark;
+          color: $brand-dark;
+        }
+      }
+      .page-link{
+        background-color: $brand-dark;
+        color: $brand-secondary;
+        border-color: $brand-secondary;
+      }
+    }
+  }
+}
