@@ -39,3 +39,8 @@ Please make sure to follow these instructions:
 **if something is wrong please try to use:**
 * `composer dump-autoload`
 
+**How it works:**
+* In dashboard you find a stats of visits ( by device, by browser etc).
+* Each time you open My visits the server increase your visits number, there you find all your visits also you can remove on of them.
+* In users info you find all the users visits with the tracking link
+* You can use the tracking link to see each user visits.
