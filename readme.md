@@ -25,9 +25,9 @@ Please make sure to follow these instructions:
 - dont forget to create the **_database_** ex: access
 * `php artisan:migrate`
 
-* `php artisan db:seed —class=UserTableSeeder`
+* `php artisan db:seed -—class=UserTableSeeder`
 
-* `php artisan db:seed —class=VisitsTableSeeder`
+* `php artisan db:seed —-class=VisitsTableSeeder`
 
 * `php artisan key generate`
 
